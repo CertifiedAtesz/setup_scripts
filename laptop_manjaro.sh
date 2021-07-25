@@ -3,7 +3,6 @@ cd ~
 mkdir Games
 mkdir Programs
 mkdir Projects
-cd Projects && mkdir Github
 
 #Configure pacman
 cd ~
@@ -30,6 +29,10 @@ cd ~
 cd Programs
 git clone https://github.com/FeralInteractive/gamemode.git && cd gamemode && ./bootstrap.sh
 cd .. && mkdir Proton && cd Proton && wget https://raw.githubusercontent.com/Termuellinator/ProtonUpdater/master/cproton.sh && sudo chmod +x cproton.sh && ./cproton.sh
+
+#Setup Sync folders and config for Syncthing
+cd Projects && mkdir Github && mkdir .stfolder && touch .stignore
+sudo echo '!\Github' >> .stignore && sudo echo "**" >> .stignore
 
 #System configuration (KDE - disable sleep mode, disable energy saving)
 
