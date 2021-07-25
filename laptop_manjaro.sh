@@ -2,7 +2,6 @@
 cd ~
 mkdir Games
 mkdir Programs
-mkdir Sync
 mkdir Projects
 cd Projects && mkdir Github
 
